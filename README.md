@@ -1,4 +1,4 @@
-<img src="http://creamycrm.com/img/logo.png" width="64" height="64" align="left" hspace="10"/>
+<img src="http://iknowitworks.org/images/creamy_logo.png" width="64" height="64" align="left" hspace="10"/>
 # Creamy
 Creamy is a free, open source CRM for managing contacts & customers, lightweight, easy to use and customisable. Creamy is a full-fledged CRM framework that allows you to handle your contacts, customers and clients easily, manage the tasks associated with your business, and be notified of important events.
 
