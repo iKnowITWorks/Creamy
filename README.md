@@ -55,8 +55,8 @@ This section will give you a timeline with information about all the important e
 ### Tasks
 This section helps you to manage your time by registering tasks for your pending activities, meetings and work. You can mark them as completed, edit them, or delete them altogether. If you have manager or admin permissions, you will be able to assign tasks to other users as well.
 
-### Admin
-The Admin menu is only available to user with administration permissions. In the Admin menu, you will be able to configure every aspect of Creamy, add, remove or modify users, setup modules and adjust the settings of your CRM.
+### Administration
+The Administration menu is only available to user with administration permissions. In the Admin menu, you will be able to configure every aspect of Creamy, add, remove or modify users, setup modules and adjust the settings of your CRM.
 
 # Contribute
 
