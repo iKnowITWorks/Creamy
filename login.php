@@ -137,9 +137,9 @@
     <div class="margin text-center">
         <span><?php $lh->translateText("never_heard_of_creamy"); ?></span>
         <br/>
-        <button class="btn bg-red btn-flat" onclick="window.location.href='http://creamycrm.com'"><i class="fa fa-globe"></i></button>
-        <button class="btn bg-light-blue btn-flat" onclick="window.location.href='https://github.com/DigitalLeaves/Creamy'"><i class="fa fa-github"></i></button>
-        <button class="btn bg-aqua btn-flat" onclick="window.location.href='https://twitter.com/creamythecrm'"><i class="fa fa-twitter"></i></button>
+        <button class="btn bg-red btn-flat" onclick="window.location.href='http://creamy.iknowitworks.org';"><i class="fa fa-globe"></i></button>
+        <button class="btn bg-light-blue btn-flat" onclick="window.location.href='https://github.com/iKnowITWorks/Creamy';"><i class="fa fa-github"></i></button>
+        <button class="btn bg-aqua btn-flat" onclick="window.location.href='https://twitter.com/iKnowITWorks';"><i class="fa fa-twitter"></i></button>
     </div>
 	<?php unset($error); ?>
   </body>
