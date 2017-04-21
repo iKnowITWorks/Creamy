@@ -90,6 +90,8 @@ class DBInstaller {
 	    error_log("Creamy install: Events table setup OK");
 	    if ($this->setupAttachmentsTables() == false) { return false; }
 	    error_log("Creamy install: Attachments table setup OK");
+		if ($this->setupLogsTable() == false) { return false; }
+	    error_log("Creamy install: Logs table setup OK");
 	    
 	    return true;
     }
@@ -433,6 +435,22 @@ class DBInstaller {
 		  "description" => "VARCHAR(255) NOT NULL",
 		);
 		return $this->dbConnector->createTable(CRM_CUSTOMER_TYPES_TABLE_NAME, $fields, null);
+	}
+
+	private function setupLogsTable() {
+		$fields = array(
+			"user_id" => "INT(11) NOT NULL",
+			"ip_address" => "VARCHAR(16) NOT NULL",
+			"event_date" => "DATETIME NOT NULL",
+			"action" => "VARCHAR(50) NOT NULL",
+			"details" => "TEXT NULL",
+			"db_query" => "TEXT NULL",
+		);
+		if (!$this->dbConnector->createTable(CRM_LOGS_TABLE_NAME, $fields, null)) {
+			$this->error = "Creamy install: Failed to create table ".CRM_LOGS_TABLE_NAME."."; 
+			return false;
+		}
+		return true;
 	}
 }
 ?>

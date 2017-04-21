@@ -29,6 +29,7 @@ require_once('ImageHandler.php');
 require_once('LanguageHandler.php');
 
 $lh = \creamy\LanguageHandler::getInstance();
+$user = \creamy\CreamyUser::currentUser();
 
 // check required fields
 $validated = 1;
@@ -107,7 +108,7 @@ if ($validated == 1) {
 	$role = CRM_DEFAULTS_USER_ROLE_GUEST; if (isset($_POST["role"])) { $role = $_POST["role"]; } 	
 	$result = $db->createUser($name, $password1, $email, $phone, $role, $avatar);
 	// analyze result
-	if ($result === USER_CREATED_SUCCESSFULLY) { ob_clean(); print CRM_DEFAULT_SUCCESS_RESPONSE; }
+	if ($result === USER_CREATED_SUCCESSFULLY) { ob_clean(); print CRM_DEFAULT_SUCCESS_RESPONSE; $db->insertLog($user->getUserId(), $_SERVER['REMOTE_ADDR'], 'ADD', "Created a New User: $name"); }
 	else if ($result === USER_ALREADY_EXISTED) { ob_clean(); $lh->translateText("user_already_exists"); } 
 	else if ($result === USER_CREATE_FAILED)   { ob_clean(); $lh->translateText("unable_create_user"); } 
 } else {

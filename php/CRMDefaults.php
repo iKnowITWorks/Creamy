@@ -127,6 +127,7 @@ define('CRM_TASKS_TABLE_NAME', "tasks");
 define('CRM_USERS_TABLE_NAME', "users");
 define('CRM_ATTACHMENTS_TABLE_NAME', "attachments");
 define('CRM_EVENTS_TABLE_NAME', "events");
+define('CRM_LOGS_TABLE_NAME', "logs");
 
 // File constants
 define('CRM_MAX_ATTACHMENT_FILESIZE', 2);

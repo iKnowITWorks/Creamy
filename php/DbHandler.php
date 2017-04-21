@@ -1797,6 +1797,24 @@ class DbHandler {
 		return true;
 	}
 	
+	public function insertLog($userid, $ipaddress, $action, $details = '', $dbquery = '') {
+		// start transaction
+		$this->dbConnector->startTransaction();
+		// insert query
+		$data = Array(
+			"user_id" => $userid,
+			"ip_address" => $ipaddress,
+			"event_date" => $this->dbConnector->now(),
+			"action" => strtoupper($action),
+			"details" => $details,
+			"db_query" => $dbquery
+		);
+		$id = $this->dbConnector->insert(CRM_LOGS_TABLE_NAME, $data);
+		// return result
+		$this->dbConnector->commit();
+		return true;
+	}
+	
 }
 
 ?>
