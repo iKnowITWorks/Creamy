@@ -1,17 +1,17 @@
 <img src="http://iknowitworks.org/images/creamy_logo.png" width="64" height="64" align="left" hspace="10"/>
 
-## Creamy
+# Creamy
 Creamy is a free, open source CRM for managing contacts & customers, lightweight, easy to use and customisable. Creamy is a full-fledged CRM framework that allows you to handle your contacts, customers and clients easily, manage the tasks associated with your business, and be notified of important events.
 
-Thanks to its [three-step installation process](https://github.com/DigitalLeaves/Creamy/wiki/Installation), you can have your Creamy CRM up and running in just minutes. Creamy has been developed with the user in mind, trying to keep its interface as simply, friendly and lightweight as possible. Anyway, there is a [short guide](https://github.com/DigitalLeaves/Creamy/wiki/Installation) to help you install Creamy.
+Thanks to its [three-step installation process](https://github.com/iKnowITWorks/Creamy/wiki/Installation), you can have your Creamy CRM up and running in just minutes. Creamy has been developed with the user in mind, trying to keep its interface as simply, friendly and lightweight as possible. Anyway, there is a [short guide](https://github.com/iKnowITWorks/Creamy/wiki/Installation) to help you install Creamy.
 
 Creamy is open source, so you can download it for free, use it, modify it to suit your needs, share it, etc. There are no limits, hidden features or lite versions. You can have as many customers as you want, as many users as you need, everything is available to you.
 
-![](http://creamycrm.com/img/responsive.png)
+![](http://iknowitworks.org/images/creamy_responsive.png)
 
 Creamy is under heavy development right now, and it's still in beta, so use at your own risk. Did you find a bug? Please let me know. It's probably full of them, so the sooner you notify me, the sooner I will try to fix them ;).
 
-More info: [http://creamycrm.com](http://creamycrm.com)
+More info: [http://creamy.iknowitworks.org](http://creamy.iknowitworks.org)
 
 ## Users and Permissions
 Creamy is a multi-user CRM. You can have as many users as you need. In order to control what data can be accessed by who, and who can delete, edit or modify the information stored in the system, Creamy implements a role permission scheme, so every user belongs to a certain role category:
@@ -22,7 +22,7 @@ Creamy is a multi-user CRM. You can have as many users as you need. In order to 
 * **Readers**: Readers are those users who need to query some information from the CRM from time to time, but don't really bother updating the customers and contacts. They have read access to customers and clients, and can access the notifications and messaging system.
 * **Guests**: Guests don't have any permission on the system. They cannot access any information apart from the main page. They don't have access to customers, contacts, messages or notifications.
 
-![](http://creamycrm.com/img/features.png)
+![](http://iknowitworks.org/images/creamy_features.png)
 
 ## Topbar
 
