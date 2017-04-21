@@ -75,7 +75,7 @@ You don't need to be a developer. I am also looking to translate Creamy to more 
 * Implement connectivity status for users (online, idle...)
 * Cleaner and better code generation ;)
 
-# Credits & Acknowledgements
+# Credits & Acknowledgements
 
 Creamy user interface is based in the theme AdminLTE by http://www.almsaeedstudio.com
 
