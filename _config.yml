@@ -1,2 +1,2 @@
 theme: jekyll-theme-cayman
-title: page.title
+title: {{ page.title }} by iKnowITWorks
