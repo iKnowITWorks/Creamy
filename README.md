@@ -82,6 +82,7 @@ Creamy user interface is based in the theme AdminLTE by http://www.almsaeedstudi
 The MIT License (MIT)
 
 Copyright (c) 2015 [Ignacio Nieto Carvajal](http://digitalleaves.com)
+
 Copyright (c) 2017 [I Know IT Works](http://iknowitworks.org)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
