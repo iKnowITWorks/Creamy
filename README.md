@@ -11,8 +11,6 @@ Creamy is open source, so you can download it for free, use it, modify it to sui
 
 Creamy is under heavy development right now, and it's still in beta, so use at your own risk. Did you find a bug? Please let me know. It's probably full of them, so the sooner you notify me, the sooner I will try to fix them ;).
 
-More info: [http://creamy.iknowitworks.org](http://creamy.iknowitworks.org)
-
 ## Users and Permissions
 Creamy is a multi-user CRM. You can have as many users as you need. In order to control what data can be accessed by who, and who can delete, edit or modify the information stored in the system, Creamy implements a role permission scheme, so every user belongs to a certain role category:
 
@@ -84,6 +82,7 @@ Creamy user interface is based in the theme AdminLTE by http://www.almsaeedstudi
 The MIT License (MIT)
 
 Copyright (c) 2015 [Ignacio Nieto Carvajal](http://digitalleaves.com)
+Copyright (c) 2017 [I Know IT Works](http://iknowitworks.org)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
