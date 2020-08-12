@@ -609,7 +609,7 @@ error_reporting(E_ERROR | E_PARSE);
 	    $paramsCode = "";
 	    if (is_array($extraParams) && count($extraParams) > 0) {
 		    foreach ($extraParams as $key => $value) { $paramsCode .= " $key=\"$value\""; }
-		}
+     }
 	    return "<img src=\"$src\" class=\"$class\" $paramsCode alt=\"$alt\"/>";
     }
     
@@ -655,6 +655,8 @@ error_reporting(E_ERROR | E_PARSE);
     }
     
     public function reloadLocationJS() { return 'location.reload();'; }
+    
+    public function newReloadLocationJS($url) { return 'window.location.href = window.location.href + "?'.$url.'";'; }
     
     public function newLocationJS($url) { return 'window.location.href = "'.$url.'";'; }
     
@@ -868,8 +870,8 @@ error_reporting(E_ERROR | E_PARSE);
 	    $cv = $this->db->getSettingValueForKeyAsBooleanValue(CRM_SETTING_EVENTS_EMAIL);
 	    $cn = $this->db->getSettingValueForKey(CRM_SETTING_COMPANY_NAME);
 	    $cl = $this->db->getSettingValueForKey(CRM_SETTING_COMPANY_LOGO);
-	    if (isset($cl)) { $cl = $this->imageWithData($cl, "", null); }
-	    $tOpts = array("black" => "black", "blue" => "blue", "green" => "green", "minimalist" => "minimalist", "purple" => "purple", "red" => "red", "yellow" => "yellow");
+	    if (isset($cl)) { $cl = $this->imageWithData($cl, "", array("style" => "max-width: 350px;")); }
+	    $tOpts = array("black" => "Black", "blue" => "Blue", "green" => "Green", "minimalist" => "Minimalist", "purple" => "Purple", "red" => "Red", "yellow" => "Yellow");
 	    
 	    // translation.
 	    $em_text = $this->lh->translationFor("require_confirmation_email");
@@ -1197,6 +1199,24 @@ error_reporting(E_ERROR | E_PARSE);
 		if (empty($version)) { $version = "unknown"; }
 		return '<footer class="main-footer"><div class="pull-right hidden-xs"><b>Version</b> '.$version.'</div><strong>Copyright &copy; 2014 <a href="http://digitalleaves.com">Digital Leaves</a> - <a href="http://woloweb.com">Woloweb</a>.</strong> All rights reserved.</footer>';
 	}
+ 
+ /**
+  * Returns the CSS link for Snackbar.
+  */
+ public function creamySnackbarCSS() {
+  $snackbarHTML  = '<!-- SnackBar -->' . "\n";
+  $snackbarHTML .= '<link href="css/snackbar/snackbar.css" rel="stylesheet" type="text/css" />' . "\n";
+		return $snackbarHTML;
+ }
+ 
+ /**
+  * Returns the JS link for Snackbar.
+  */
+ public function creamySnackbarJS() {
+  $snackbarHTML  = '<!-- SnackBar -->' . "\n";
+  $snackbarHTML .= '<script src="js/plugins/snackbar/snackbar.js" type="text/javascript"></script>' . "\n";
+		return $snackbarHTML;
+ }
 	
 	/** Topbar Menu elements */
 
@@ -1405,7 +1425,7 @@ error_reporting(E_ERROR | E_PARSE);
 			$adminArea .= $this->getSidebarItem("./adminsettings.php", "gears", $this->lh->translationFor("settings")); // admin settings
 			$adminArea .= $this->getSidebarItem("./adminusers.php", "user", $this->lh->translationFor("users")); // admin settings
 			$adminArea .= $this->getSidebarItem("./adminmodules.php", "archive", $this->lh->translationFor("modules")); // admin settings
-			$adminArea .= $this->getSidebarItem("./admincustomers.php", "users", $this->lh->translationFor("customers")); // admin settings	
+			$adminArea .= $this->getSidebarItem("./admincustomers.php", "users", $this->lh->translationFor("customer_groups")); // admin settings	
 			foreach ($modulesWithSettings as $k => $m) { $adminArea .= $this->getSidebarItem("./modulesettings.php?module_name=".urlencode($k), $m->mainPageViewIcon(), $m->mainPageViewTitle()); }
 	        $adminArea .= '</ul></li>';
 		}

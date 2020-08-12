@@ -75,7 +75,7 @@
                         <?php 
 	                        $customersTitle = $lh->translationFor("administration");
 	                        print $customersTitle; ?>
-                        <small><?php $lh->translateText("customer_types"); ?></small>
+                        <small><?php $lh->translateText("customer_groups"); ?></small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="./index.php"><i class="fa fa-dashboard"></i> <?php $lh->translateText("home"); ?></a></li>

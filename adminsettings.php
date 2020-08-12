@@ -35,7 +35,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Creamy</title>
+        <title><?php print $ui->creamyHeaderName(); ?></title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -44,6 +44,8 @@
         <!-- Creamy style -->
         <link href="css/creamycrm.css" rel="stylesheet" type="text/css" />
         <?php print $ui->creamyThemeCSS(); ?>
+		
+		<?php print $ui->creamySnackbarCSS(); ?>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -149,6 +151,9 @@
         </div><!-- ./wrapper -->
         <!-- Modal Dialogs -->
 		<?php include_once "./php/ModalPasswordDialogs.php" ?>
+		
+		<?php print $ui->creamySnackbarJS(); ?>
+		
 		<script type="text/javascript">
 		$(document).ready(function() {
 			/** 
@@ -170,7 +175,7 @@
 					  success: function(data) {
 							if (data == '<?php print CRM_DEFAULT_SUCCESS_RESPONSE; ?>') {
 							<?php 
-								print $ui->reloadLocationJS();
+								print $ui->newReloadLocationJS('saved');
 							?>
 							} else {
 							<?php 
@@ -184,7 +189,15 @@
 					return false; //don't let the form refresh the page...
 				}					
 			});
-			 
+			
+			<?php if (array_key_exists('saved', $_REQUEST)) { ?>
+			history.pushState('', document.title, window.location.pathname);
+			
+			Snackbar.show({
+				text: "Changes on the settings were saved to the database.",
+				showAction: false
+			});
+			<?php } ?>
 		});
 		</script>
 

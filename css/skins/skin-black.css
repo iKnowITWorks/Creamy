@@ -163,3 +163,7 @@
   border-bottom-right-radius: 2px !important;
   border-bottom-left-radius: 0 !important;
 }
+.skin-black .snackbar-container {
+  color: #fff !important;
+  background: #222 !important;
+}

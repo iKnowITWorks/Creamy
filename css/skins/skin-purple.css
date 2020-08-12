@@ -138,3 +138,7 @@
   border-bottom-right-radius: 2px !important;
   border-bottom-left-radius: 0 !important;
 }
+.skin-purple .snackbar-container {
+  color: #fff !important;
+  background: #555299 !important;
+}

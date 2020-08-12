@@ -138,3 +138,10 @@
   border-bottom-right-radius: 2px !important;
   border-bottom-left-radius: 0 !important;
 }
+.skin-red .snackbar-container {
+  color: #fff !important;
+  background: #d73925 !important;
+}
+.skin-red .snackbar-container .action {
+  color: #00a65a !important;
+}

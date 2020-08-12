@@ -56,13 +56,15 @@ $custsOk = $db->weHaveAtLeastOneCustomerOrContact();
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Creamy</title>
+        <title><?php print $ui->creamyHeaderName(); ?></title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Creamy style -->
         <link href="css/creamycrm.css" rel="stylesheet" type="text/css" />
         <?php print $ui->creamyThemeCSS(); ?>
+		
+		<?php print $ui->creamySnackbarCSS(); ?>
 
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -201,6 +203,8 @@ $custsOk = $db->weHaveAtLeastOneCustomerOrContact();
         </div><!-- ./wrapper -->
 		<!-- Modal Dialogs -->
 		<?php include_once "./php/ModalPasswordDialogs.php" ?>
+		
+		<?php print $ui->creamySnackbarJS(); ?>
 
 		<!-- Statistics -->
 		<?php if ($statsOk) { ?>

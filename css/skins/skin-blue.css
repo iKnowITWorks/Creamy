@@ -149,3 +149,10 @@
 .skin-blue.layout-top-nav .main-header > .logo:hover {
   background: #3b8ab8;
 }
+.skin-blue .snackbar-container {
+  color: #fff !important;
+  background: #367fa9 !important;
+}
+.skin-blue .snackbar-container .action {
+  color: #f00 !important;
+}
