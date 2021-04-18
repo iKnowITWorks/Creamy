@@ -1,7 +1,7 @@
 <img src="http://iknowitworks.org/images/creamy_logo.png" width="64" height="64" align="left" hspace="10"/>
 
 # Creamy
-![NPM](https://img.shields.io/github/issues/iKnowITWorks/Creamy)
+![NPM](https://img.shields.io/github/issues/iKnowITWorks/Creamy?style=for-the-badge) ![NPM](https://img.shields.io/github/forks/iKnowITWorks/Creamy?style=for-the-badge) ![npm](https://img.shields.io/github/license/iKnowITWorks/Creamy?style=for-the-badge) ![stars](https://img.shields.io/github/stars/iKnowITWorks/Creamy?style=for-the-badge)
 
 Creamy is a free, open source CRM for managing contacts & customers, lightweight, easy to use and customisable. Creamy is a full-fledged CRM framework that allows you to handle your contacts, customers and clients easily, manage the tasks associated with your business, and be notified of important events.
 
